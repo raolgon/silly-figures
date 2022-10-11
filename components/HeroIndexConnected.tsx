@@ -1,27 +1,80 @@
-import { FC } from "react";
+import { FC, MouseEventHandler, useCallback, useEffect, useMemo, useState } from "react";
+import { PublicKey} from "@solana/web3.js";
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { Metaplex, walletAdapterIdentity, CandyMachine } from "@metaplex-foundation/js";
+import { useRouter } from "next/router";
 
 const HeroIndexConnected: FC = () => {
 
+    const {connection} = useConnection()
+    const walletAdapter = useWallet()
+    const [candyMachine, setCandyMachine] = useState<CandyMachine>()
+    const [isMinting, setIsMinting] = useState(false)
+
+    const metaplex = useMemo(() => {
+        return Metaplex.make(connection).use(walletAdapterIdentity(walletAdapter))
+    }, [connection, walletAdapter])
+
+    useEffect(() => {
+        if(!metaplex) return
+
+        metaplex
+            .candyMachines()
+            .findByAddress({
+                address: new PublicKey("2GzDjDfRUtajiaFvVfsx1j88aopFTge6qdc6vdWBJqFL")
+            })
+            .run()
+            .then((candyMachine) => {
+                console.log(candyMachine)
+                setCandyMachine(candyMachine)
+            })
+            .catch((error) => {
+                alert(error)
+        })
+    }, [metaplex])
+
+    const router = useRouter()
+
+    const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
+        async (event) => {
+            if(event.defaultPrevented) return
+
+            if(!walletAdapter.connected || !candyMachine){
+                return
+            }
+
+            try {
+                setIsMinting(true)
+
+                const nft = await metaplex.candyMachines().mint({candyMachine}).run()
+
+                setIsMinting(false)
+
+                console.log(nft)
+                router.push(`/newMint?mint=${nft.nft.address.toBase58()}`)
+            } catch (error) {
+                alert(error)
+            } finally {
+                setIsMinting(false)
+            }
+        },
+        [metaplex, walletAdapter, candyMachine]
+    )
+
     return (
-        <header className="hero min-h-screen bg-base-200">
+        <header className="hero min-h-screen bg-base-200" style={{backgroundImage: `url(/hero_index_bg.png)`}}>
             <div className="hero-content text-center">
                 <div className="max-w-md">
                     <h1 className="text-5xl font-bold">Welcome buildor!</h1>
                     <p className="py-6">
-                        Each figure is ramdonly generated and can be stacked woth $BLD.
+                        Each figure is ramdonly generated and can be stacked woth $SF.
                         <br />
-                        Use your $BLD to upgrade your figure and get perks within the community
+                        Use your $SF to upgrade your figure and get perks within the community
                     </p>
-                    <div className="grid grid-cols-5 gap-2">
-                        <img src="fig_1.png" alt="Figure 1" />
-                        <img src="fig_2.png" alt="Figure 2" />
-                        <img src="fig_3.png" alt="Figure 3" />
-                        <img src="fig_4.png" alt="Figure 4" />
-                        <img src="fig_5.png" alt="Figure 5" />
-                    </div>
-                    <button className="btn btn-primary btn-wide">
-                        Mint figure!
-                    </button>
+                    {!isMinting
+                        ? <button className="btn btn-primary btn-wide" onClick={handleClick}> Mint figure! </button>
+                        : <button className="btn loading">Minting!</button>
+                    }
                 </div>
             </div>
         </header>

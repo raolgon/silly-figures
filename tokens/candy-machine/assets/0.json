@@ -1,0 +1,28 @@
+{
+"name": "Silly Figure #1",
+    "symbol": "SF",
+    "description": "Red irregular heptagon",
+    "image": "0.png",
+    "attributes": [
+        {
+            "trait_type": "type",
+            "value": "heptagon"
+        },
+        {
+            "trait_type": "sillyness",
+            "value": "very"
+        },
+        {
+            "trait_type": "color",
+            "value": "red"
+        }
+    ],
+    "properties": {
+        "files": [
+            {
+                "uri": "0.png",
+                "type": "image/png"
+            }
+        ]
+    }
+}

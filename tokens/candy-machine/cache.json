@@ -1,0 +1,57 @@
+{
+  "program": {
+    "candyMachine": "GnJfNCAvVaNFNvSjTVuLtXNb1XTw3b22HZPkqCRxvAVJ",
+    "candyMachineCreator": "6bcB1GV6ktJfnG5uwS2Eo2obrY4jRwx7MVgMVkQUUUDd",
+    "collectionMint": "AjUEUPa8e3rzK7XgKf186U7LUVPCa8XkS41Fqum5u5Nj"
+  },
+  "items": {
+    "-1": {
+      "name": "Silly Figures",
+      "image_hash": "c873599158d209a87b09d76b7f4c81675e6dd346c5784eb292bd05e2cab2c450",
+      "image_link": "https://arweave.net/qo_1Ad50VRnDzOu_6hU4rXES71a007jX7uRl-xUkpT8?ext=png",
+      "metadata_hash": "ada7c0b7bdd606850462b184b0f39906004031277e3ba9472140d2163e5af0f2",
+      "metadata_link": "https://arweave.net/FPyCguRoqrntslK07yUkhpIeYXxtMexkUL31c07zZ04",
+      "onChain": true
+    },
+    "0": {
+      "name": "Silly Figure #1",
+      "image_hash": "f7adec86a81bb110cb6daa87a390b456417d2af6f1d2c4376c905b132b060451",
+      "image_link": "https://arweave.net/gkIShhVDagLwEPIJoSwCfNj9zRAsjSnvpUyE5FNKhhw?ext=png",
+      "metadata_hash": "e62fd37dade9db790b0db9d6eb72dba4e44c44b0a7b471c35e339588964b9f58",
+      "metadata_link": "https://arweave.net/We8-zoJkDd7mv4aF0y_IYRTHlBq5gePVAtLsLXnsapw",
+      "onChain": true
+    },
+    "1": {
+      "name": "Silly Figure #2",
+      "image_hash": "669610e4830606c7d5c8086fcd72310ab14b8af1159468ef46ba12bc867a0643",
+      "image_link": "https://arweave.net/fL6Eeul2sYL0WIQC1MyG0ZtzfdGtc-a9_6dJKfIOquQ?ext=png",
+      "metadata_hash": "29fd797315d9130617be93ad2f4290a8a022d57c7557a41c00568193cb9c4c36",
+      "metadata_link": "https://arweave.net/hwNXb_zpz-nrtb_vOxRjz9UmBvA7kgb0L6nVI_szXRk",
+      "onChain": true
+    },
+    "2": {
+      "name": "Silly Figure #3",
+      "image_hash": "91f3f22ed5f53571dd2251ebc13dad8d39980d5d89df8818f4c29a83b226e93d",
+      "image_link": "https://arweave.net/qfpQYZrfn8-ec0p625wUiclSJYhQDXGDk_3fl66PhCU?ext=png",
+      "metadata_hash": "a1eff5e9e5917b4a1c92f70995bd2ee24e2dd21117bba8b7aba11c68682cfbfa",
+      "metadata_link": "https://arweave.net/6h9gGOSxS8PHXLaDXdxGjc0xc2wpZWavJnjYiWqOJf8",
+      "onChain": true
+    },
+    "3": {
+      "name": "Silly Figure #4",
+      "image_hash": "e2b401c446ad428532a96a6c806e5a562239e9f16995e1959f43e5b034e51730",
+      "image_link": "https://arweave.net/ID7h5pl-UZSAfDtVxrwbR_KSv9A_3bKIFydSFsLyDBQ?ext=png",
+      "metadata_hash": "dc3f433af178e0db6b5fc9b145c9519baa82aea81a1a36fd26fe4fd64e9f78e3",
+      "metadata_link": "https://arweave.net/K8VWTsG2TOTNfZlJuzajSNiadf9b_ihbTjfXxQ0a3JQ",
+      "onChain": true
+    },
+    "4": {
+      "name": "Silly Figure #5",
+      "image_hash": "c873599158d209a87b09d76b7f4c81675e6dd346c5784eb292bd05e2cab2c450",
+      "image_link": "https://arweave.net/9VNB-6mUo9tjrgRThQ4GRnitNXqpeVJ9jO81YMw7wLI?ext=png",
+      "metadata_hash": "883f0e48a70a45387efb9aad1a7a08c3b4d065247db8331235aa8ee8712c2b6d",
+      "metadata_link": "https://arweave.net/Qf492NWKcTHmt17ofSOGZpHGHo_EGv2rBiXdPGaPB1c",
+      "onChain": true
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Silly Figure #3",
+        "symbol": "SF",
+        "description": "Blue long triangule",
+        "image": "2.png",
+        "attributes": [
+            {
+                "trait_type": "type",
+                "value": "triangule"
+            },
+            {
+                "trait_type": "sillyness",
+                "value": "mid"
+            },
+            {
+                "trait_type": "color",
+                "value": "blue"
+            }
+        ],
+        "properties": {
+            "files": [
+                {
+                    "uri": "2.png",
+                    "type": "image/png"
+                }
+            ]
+        }
+    }

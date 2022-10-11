@@ -1,0 +1,28 @@
+{
+    "name": "Silly Figure #4",
+        "symbol": "SF",
+        "description": "Purple elipse",
+        "image": "3.png",
+        "attributes": [
+            {
+                "trait_type": "type",
+                "value": "elipse"
+            },
+            {
+                "trait_type": "sillyness",
+                "value": "low"
+            },
+            {
+                "trait_type": "color",
+                "value": "purple"
+            }
+        ],
+        "properties": {
+            "files": [
+                {
+                    "uri": "3.png",
+                    "type": "image/png"
+                }
+            ]
+        }
+    }
